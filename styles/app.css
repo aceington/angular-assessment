@@ -1,3 +1,12 @@
+.logo {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 60px;
+  right: 80px;
+
+}
+
 .jumbotron {
     background: url('http://ugmonk.com/wp-content/uploads/2016/03/category-clothing-1.jpg') center no-repeat;
     background-size: cover;

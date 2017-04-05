@@ -3,9 +3,36 @@
         <p>Shop Page</p>
     </div>
 </section>
-<div class="product-grid__item   grid__item one-half large--one-third" >
+<div ng-repeat='items in products' class="product-grid__item   grid__item one-half large--one-third" >
 
-    <!--Repeat over your data and display it below -->
 
-    
+      <div ng-click='hide = !hide'>
+        <img src="{{items.image}}" ng-hide='hide'>
+      </div>
+      <!--Product Image click collapse the image-->
+      <a class="product-grid__product" >
+          <img class="product-grid__img"   sizes="(min-width: 960px) 33vw, (min-width: 769px) 50vw, 100vw" alt="">
+      </a>
+      <div ng-click='show = !show'>
+        <a class="product-grid__product">
+            show image
+        </a>
+      </div>
+
+
+      <!--Product Meta-->
+      <div class="product-grid__meta">
+          <!--Title click Should redirect to the product-details section. remember to pass along the product id so you can make an api call
+      to get the specific product details-->
+          <h3 class="product-grid__name"><a ui-sref="products">{{items.title}}</a></h3>
+
+          <!--Product Description-->
+          <h4 class="product-grid__sub">{{items.desc}}</h4>
+
+          <!--Product Price-->
+          <div class="product-grid__price">${{items.price}}.00</div>
+      </div>
+  <!--Repeat over your data and display it below -->
+
+
 </div>
